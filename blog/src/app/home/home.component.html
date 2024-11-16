@@ -1,0 +1,28 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-sm-6" *ngFor="let post of blogData">
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>{{post.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="/images/image{{post.imageId}}.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            {{post.body}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Görüntüle</button>
+          <button mat-raised-button color="accent">Düzenle</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    
+  </div>
+</div>
+
+
+
+  
