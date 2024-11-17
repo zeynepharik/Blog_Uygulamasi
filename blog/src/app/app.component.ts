@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { BaseService } from './services/base.service';
+import {MatDialogModule } from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +14,9 @@ import { BaseService } from './services/base.service';
     CommonModule,
     RouterOutlet,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    MatDividerModule
   ],
   providers: [
     BaseService  // BaseService'i burada sağlayıcı olarak ekliyoruz

@@ -1,0 +1,43 @@
+<div style="display: flex;justify-content: space-between;">
+    <div style="display: flex;align-items:center;">
+        <h3 style="margin: 0px">
+            <span>
+                {{isUpdate ? 'Yazıyı Güncelle' : 'Yazıyı Gör'}}
+            </span>
+        </h3>
+    
+    </div>
+    
+    <button mat-button style="font-size:24px" (click)="close()">
+        x
+    </button>
+</div>
+
+
+<div *ngIf="!isUpdate">
+    <div class="row">
+        <div class="col-md-6" style="padding-left: 0px;">
+            <img class="w-100" src="images/image{{imageUrl}}.jpg" alt="">
+        </div>
+        <div class="col-md-6">
+            <h2>{{title}}</h2>
+            <p>{{body}}</p>
+        </div>
+    </div>
+    <div class="row"style="background-color: lightgray;
+    margin-bottom:20px;
+    padding: 20px;" *ngFor="let comment of commentData">
+        <div class="col-md-2">
+            <img style="width:30px;
+            height: 30px;
+            border-radius: 50%;"  src="images/profile/profile{{comment.userId}}.jpg" alt="">
+        </div>
+        <div class="col-md-10">
+            <h3>{{comment.name}}</h3>
+            <p>{{comment.body}}</p>
+        </div>
+    </div>
+</div>
+<div *ngIf="isUpdate">
+    Düzenle
+  </div>
