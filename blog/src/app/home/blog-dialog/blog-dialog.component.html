@@ -14,30 +14,31 @@
 </div>
 
 
-<div *ngIf="!isUpdate">
-    <div class="row">
+<div style="max-height: 60vh; overflow-y: auto;">
+    <div *ngIf="!isUpdate">
+      <div class="row mb-3">
         <div class="col-md-6" style="padding-left: 0px;">
-            <img class="w-100" src="images/image{{imageUrl}}.jpg" alt="">
+          <img class="w-100" src="images/image{{imageUrl}}.jpg" alt="">
         </div>
         <div class="col-md-6">
-            <h2>{{title}}</h2>
-            <p>{{body}}</p>
+          <h2>{{title}}</h2>
+          <p>{{body}}</p>
         </div>
-    </div>
-    <div class="row"style="background-color: lightgray;
-    margin-bottom:20px;
-    padding: 20px;" *ngFor="let comment of commentData">
+      </div>
+      <div class="row" style="background-color: lightgray; margin-bottom:20px; padding: 20px;" *ngFor="let comment of commentData">
         <div class="col-md-2">
-            <img style="width:30px;
-            height: 30px;
-            border-radius: 50%;"  src="images/profile/profile{{comment.userId}}.jpg" alt="">
+          <img style="width:30px; height: 30px; border-radius: 50%;" src="images/profile/profile{{comment.userId}}.jpg" alt="">
         </div>
+        
         <div class="col-md-10">
-            <h3>{{comment.name}}</h3>
-            <p>{{comment.body}}</p>
+          <h3>{{comment.name}}</h3>
+          <p>{{comment.body}}</p>
+          
         </div>
+      </div>
     </div>
-</div>
+  </div>
+  
 <div *ngIf="isUpdate">
     Düzenle
   </div>

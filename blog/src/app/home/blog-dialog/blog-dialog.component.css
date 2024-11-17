@@ -1,4 +1,11 @@
-::ng-deep .mat-dialog-container
-{
-    height:auto;
+::ng-deep .mat-dialog-container {
+    max-height: 80vh; /* Maksimum yükseklik */
+    overflow-y: auto; /* Dikey kaydırma aktif */
+    padding: 0; /* İsteğe bağlı: dialog kutusundaki varsayılan boşluğu kaldırır */
+}
+::ng-deep .custom-dialog-container {
+    border-radius: 0; /* Köşeleri dikdörtgen yapar */
+    max-width: unset; /* Varsayılan genişlik kısıtlamasını kaldırır */
+    width: 90vw; /* Dialog genişliği */
+    height: 90vh; /* Dialog yüksekliği */
 }

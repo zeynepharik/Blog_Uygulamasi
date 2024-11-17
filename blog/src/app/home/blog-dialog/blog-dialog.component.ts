@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { CommentService } from '../../services/comment.service';
+import {FormGroup,Validators,FormControl} from '@angular/forms'
 
 @Component({
   selector: 'app-blog-dialog',
@@ -18,10 +19,17 @@ export class BlogDialogComponent implements OnInit{
   body:string="";
   commentData: any[] = [];
 
+  form =new FormGroup({
+    title:new FormControl(null),
+    body:new FormControl(null),
+  })
   constructor(private commentService:CommentService ,@Inject(MAT_DIALOG_DATA) private data:any, private dialogRef:MatDialogRef<BlogDialogComponent>) {
     debugger;
     if(data.isUpdate){
       this.isUpdate = true;
+      this.form.patchValue({
+        
+      })
     }
     else
     {
@@ -42,4 +50,5 @@ export class BlogDialogComponent implements OnInit{
   close(){
     this.dialogRef.close();
   }
+  
 }

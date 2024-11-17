@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { BaseService } from './services/base.service';
 import {MatDialogModule } from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatCardModule,
     MatButtonModule,
     MatDialogModule,
-    MatDividerModule
+    MatDividerModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     BaseService  // BaseService'i burada sağlayıcı olarak ekliyoruz
